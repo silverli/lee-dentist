@@ -31,8 +31,3 @@ Once Stubbleman is in your `~/.middleman` directory, you can just pull the repos
 cd ~/.middleman/stubbleman
 git pull
 ```
-
-=======
-# lee-dentist
-A minimalist site designed and built for Smart Dental MA using stubbleman-middleman.
->>>>>>> 625b26f5a6684c590a9da2609c471f18455a6995
