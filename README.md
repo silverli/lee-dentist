@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Stubbleman
+# Lee Smart Dental MA Site
 ## A Middleman Project Template with Stubble Integration.
 
 This is an opinionated [Middleman](http://middlemanapp.com) template to get the team at [Bearded](http://bearded.com) building static sites quickly.
