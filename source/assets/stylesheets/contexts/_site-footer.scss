@@ -1,0 +1,31 @@
+.site-footer {
+  text-align: center;
+  background-color: darken(#283353, 5%);
+  padding-top: 2em;
+  margin: 0;
+
+  .contact {
+    @include pie-clearfix;
+
+    .contact-item {
+      padding-bottom: 1em;
+
+      @include breakpoint($breakpoint-footer) {
+        @include column(4);
+        line-height: 2em;
+        padding-bottom: 0;
+      }
+
+      &:last-of-type {
+        @include last;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 2em;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
+}

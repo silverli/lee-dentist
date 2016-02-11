@@ -1,0 +1,19 @@
+.secondary-header {
+  background-color: darken(#283353, 5%);
+  padding: 1.5em;
+  text-align: center;
+
+  .secondary-title-large {
+    color: #B7BFD4;
+  }
+
+  .secondary-title-small {
+    display: inline-block;
+  }
+
+  .schedule-action {
+    @include button;
+    display: inline-block;
+    margin-left: 1em;
+  }
+}

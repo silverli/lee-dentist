@@ -1,0 +1,25 @@
+.feature-grid {
+  @include pie-clearfix;
+  clear: both;
+  text-align: center;
+  padding: 1em 14% 0 14%;
+
+  .button-divider {
+    
+    @include breakpoint($breakpoint-s) {
+      @include column(4);
+    }
+
+    &.last {
+      @include last;
+    }
+
+    .feature-item {
+      border-radius: 50%;
+      padding: 3em;
+      margin-bottom: 1em;
+      background-color: $background-color;
+      border: 0 none;
+    }
+  }
+}
