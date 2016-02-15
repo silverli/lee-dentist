@@ -21,13 +21,12 @@
   .main-content & {
     background-color: $background-color;
     padding: 2em 0 2em 0;
-    margin-top: 1em;
   }
 }
 
 html {
   background-color: #3C4765;
-  background: #3C4765 url(../images/main-dark-bg.jpg) top center no-repeat;
+  //background: #3C4765 url(../images/main-dark-bg.jpg) top center no-repeat;
   background-size: 120% auto;
 }
 
