@@ -57,6 +57,8 @@ after_configuration do
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
+activate :directory_indexes
+
 # Autoprefixer configuration
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']

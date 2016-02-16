@@ -1,10 +1,22 @@
-.icon-tooth, .icon-tooth-reverse, .icon-smart-tooth, .icon-smart-logo { //Created by Alex Podolsky from the Noun Project
+@mixin icon-base {
   background-size: contain;
-  height: 2em;
-  width: 2em;
   display: inline-block;
+  height: 50px;
+  width: 50px;
   vertical-align: top;
   margin-right: 0.5em;
+}
+
+.icon-tooth, 
+.icon-tooth-reverse, 
+.icon-smart-logo, 
+.icon-dentist,
+.icon-dentist-reverse,
+.icon-tool,
+.icon-tool-reverse,
+.icon-toothbrush,
+.icon-toothbrush-reverse { //Created by Alex Podolsky from the Noun Project
+  @include icon-base;
 }
 
 .icon-smart-tooth, .icon-smart-logo {

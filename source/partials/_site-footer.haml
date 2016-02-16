@@ -1,22 +1,25 @@
 %footer.site-footer
-  %section.contact
-    .contact-item
-      %ul
-        %li Site Map:
-        %li About
-        %li New Patients
-        %li Appointments
-        %li Contact
-    .contact-item
-      <iframe class = "lee-map" width="200" height="160" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=452%20Pleasant%20street%20Malden%2C%20MA%2002148&key=AIzaSyBxW5kSI3Wgxq8x8O7TeCxERk4OwiO3Y1A" allowfullscreen></iframe>
-    .contact-item
-      %ul
-        %li 452 Pleasant Street
-        %li Malden, MA 02148
-        %li 781-322-4914 &bullet; 781-605-3707 
-        %li Fax: 781-605-3797
-        %li Email: info@smartdental.com
+  .container
+    %section.contact
+      .contact-item
+        %ul
+          %li Site Map:
+          %li About
+          %li New Patients
+          %li Appointments
+          %li Contact
 
-  %p.copyright
-    Copyright #{Date.today.year.to_s}. All rights reserved.
+      .contact-item
+        <iframe class = "lee-map" width="300" height="170" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=452%20Pleasant%20street%20Malden%2C%20MA%2002148&key=AIzaSyBxW5kSI3Wgxq8x8O7TeCxERk4OwiO3Y1A" allowfullscreen></iframe>
+
+      .contact-item
+        %ul
+          %li 452 Pleasant Street
+          %li Malden, MA 02148
+          %li 781-322-4914 &bullet; 781-605-3707 
+          %li Fax: 781-605-3797
+          %li Email: info@smartdental.com
+
+    %p.copyright
+      Copyright #{Date.today.year.to_s}. All rights reserved.
 

@@ -13,12 +13,14 @@
 }
 
 .menu-trigger, .utility-trigger {
-  border: none;
+  border: 2px #B7BFD4 solid;
+  font-family: 'Oswald', sans-serif;
   background-color: transparent;
   color: #B7BFD4;
+  border-radius: 5px;
   font-size: 1.25em;
-  padding: 0.5em;;
-  margin: 0;
+  padding: 0.25em;;
+  margin-bottom: 1em;
 
   &:hover, &:focus {
     cursor: pointer;
@@ -40,7 +42,10 @@
 .primary-navigation, .utility-navigation {
   display: none;
   clear: both;
-  padding-top: 3.3em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  padding-top: 2.2em;
   padding-bottom: 0.5em;
 
   @include breakpoint($breakpoint-nav) {

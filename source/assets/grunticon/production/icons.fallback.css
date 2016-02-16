@@ -1,8 +1,20 @@
+.icon-dentist-reverse { background-image: url('png/dentist-reverse.png'); background-repeat: no-repeat; }
+
+.icon-dentist { background-image: url('png/dentist.png'); background-repeat: no-repeat; }
+
 .icon-smart-logo { background-image: url('png/smart-logo.png'); background-repeat: no-repeat; }
 
 .icon-smart-tooth { background-image: url('png/smart-tooth.png'); background-repeat: no-repeat; }
 
+.icon-tool-reverse { background-image: url('png/tool-reverse.png'); background-repeat: no-repeat; }
+
+.icon-tool { background-image: url('png/tool.png'); background-repeat: no-repeat; }
+
 .icon-tooth-reverse { background-image: url('png/tooth-reverse.png'); background-repeat: no-repeat; }
 
 .icon-tooth { background-image: url('png/tooth.png'); background-repeat: no-repeat; }
+
+.icon-toothbrush-reverse { background-image: url('png/toothbrush-reverse.png'); background-repeat: no-repeat; }
+
+.icon-toothbrush { background-image: url('png/toothbrush.png'); background-repeat: no-repeat; }
 

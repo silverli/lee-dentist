@@ -4,8 +4,8 @@
   text-align: center;
   padding: 1em 14% 0 14%;
 
-  .button-divider {
-    
+  .feature-divider {
+
     @include breakpoint($breakpoint-s) {
       @include column(4);
     }
@@ -15,11 +15,16 @@
     }
 
     .feature-item {
-      border-radius: 50%;
-      padding: 3em;
-      margin-bottom: 1em;
-      background-color: $background-color;
-      border: 0 none;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      color: #128080;
+
+      .icon {
+        margin: 0.5em;
+        height: 6em;
+        width: 6em;
+      }
     }
   }
 }
