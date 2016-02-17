@@ -1,32 +1,34 @@
 .site-footer {
+  @include pie-clearfix;
   background-color: darken(#283353, 5%);
   padding-top: 2em;
   margin: 0;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 
-  .contact {
+  .contact-group {
     @include pie-clearfix;
 
     .contact-item {
       padding-bottom: 1em;
 
-      @include breakpoint($breakpoint-footer) {
+      @include breakpoint($breakpoint-l) {
         @include column(4);
         line-height: 2em;
         padding-bottom: 0;
       }
 
       &:last-of-type {
-        @include last;
+        @include breakpoint($breakpoint-l) {
+          @include last;
+        }
       }
     }
   }
 
   .copyright {
     margin-top: 2em;
-    margin-bottom: 0;
+    margin-bottom: 2em;
     display: block;
-    text-align: center;
   }
 }

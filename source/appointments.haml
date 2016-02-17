@@ -1,64 +1,65 @@
 ---
 title: Make an Appointment
 ---
-%form#contact-form{action:"//formspree.io/lindsaysilver1@gmail.com", method:"POST"}
-  .input
-    %label{for: 'contact-first-name'}
-      %span.label-text First Name
-      %input#contact-first-name{type:'text', name: 'First Name', placeholder:"First Name"}
-
-  .input
-    %label{for: 'contact-last-name'}
-      %span.label-text Last Name
-      %input#contact-last-name{type:'text', name: 'Last Name', placeholder:"Last Name"}
-
-  .two-up
+.constrained
+  %form#contact-form{action:"//formspree.io/lindsaysilver1@gmail.com", method:"POST"}
     .input
-      %label{for: 'contact-email'}
-        %span.label-text Email
-        %input#contact-email{type:'text', name:"_replyto",placeholder:"person@website.com"}
+      %label{for: 'contact-first-name'}
+        %span.label-text First Name
+        %input#contact-first-name{type:'text', name: 'First Name', placeholder:"First Name"}
 
     .input
-      %label{for: 'contact-phone'}
-        %span.label-text Phone
-        %input#contact-phone{type:'text', name: 'Phone', placeholder:"xxx-xxx-xxxx"}
+      %label{for: 'contact-last-name'}
+        %span.label-text Last Name
+        %input#contact-last-name{type:'text', name: 'Last Name', placeholder:"Last Name"}
 
-  .two-up
+    .two-up
+      .input
+        %label{for: 'contact-email'}
+          %span.label-text Email
+          %input#contact-email{type:'text', name:"_replyto",placeholder:"person@website.com"}
+
+      .input
+        %label{for: 'contact-phone'}
+          %span.label-text Phone
+          %input#contact-phone{type:'text', name: 'Phone', placeholder:"xxx-xxx-xxxx"}
+
+    .two-up
+      .input
+        %label{for: 'contact-date'}
+          %span.label-text Date Desired
+          %input#contact-date{type:'text', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
+
+      .input
+        %label{for: 'contact-time'}
+          %span.label-text Time Desired
+          %input#contact-time{type:'text', name: 'Time Desired for Appointment', placeholder:"Time"}
+
     .input
-      %label{for: 'contact-date'}
-        %span.label-text Date Desired
-        %input#contact-date{type:'text', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
+      %label{for: 'contact-reason'}
+        %span.label-text Reason for Appointment
+        %select#contact-reason{name: '_subject'}
+          %option Select Reason
+          %option{value: 'Smart Dental Appointment Request: Check-up/Cleaning'} Check-up/Cleaning
+          %option{value: 'Smart Dental Appointment Request: Whitening'} Whitening
+          %option{value: 'Smart Dental Appointment Request: Crowns & Bridges'} Crowns and Bridges
+          %option{value: 'Smart Dental Appointment Request: Dentures/Specialty Dentures'} Dentures/Specialty Dentures
+          %option{value: 'SmartDental Appointment Request: Cosmetic Fillings'} Cosmetic Fillings
+          %option{value: 'Smart Dental Appointment Request: Implants'} Implants
+          %option{value: 'Smart Dental Appointment Request: Veneers'} Veneers
+          %option{value: 'Smart Dental Appointment Request: Sealants'} Sealants
+          %option{value: 'Smart Dental Appointment Request: Root Canal Therapy'} Root Canal Therapy
+          %option{value: 'Smart Dental Appointment Request: General Question'} Ask a Question
+          %option{value: 'Smart Dental Appointment Request: Other'} Other
 
     .input
-      %label{for: 'contact-time'}
-        %span.label-text Time Desired
-        %input#contact-time{type:'text', name: 'Time Desired for Appointment', placeholder:"Time"}
+      %label{for: 'contact-message'}
+        %span.label-text Message
+        %textarea{id:'contact-message', name: 'Message', placeholder:"Comments or Notes about Appointment"}
+    
+    %input{type:'hidden', name:'_next', value:'//localhost:4567/thanks'}
 
-  .input
-    %label{for: 'contact-reason'}
-      %span.label-text Reason for Appointment
-      %select#contact-reason{name: '_subject'}
-        %option Select Reason
-        %option{value: 'Smart Dental Appointment Request: Check-up/Cleaning'} Check-up/Cleaning
-        %option{value: 'Smart Dental Appointment Request: Whitening'} Whitening
-        %option{value: 'Smart Dental Appointment Request: Crowns & Bridges'} Crowns and Bridges
-        %option{value: 'Smart Dental Appointment Request: Dentures/Specialty Dentures'} Dentures/Specialty Dentures
-        %option{value: 'SmartDental Appointment Request: Cosmetic Fillings'} Cosmetic Fillings
-        %option{value: 'Smart Dental Appointment Request: Implants'} Implants
-        %option{value: 'Smart Dental Appointment Request: Veneers'} Veneers
-        %option{value: 'Smart Dental Appointment Request: Sealants'} Sealants
-        %option{value: 'Smart Dental Appointment Request: Root Canal Therapy'} Root Canal Therapy
-        %option{value: 'Smart Dental Appointment Request: General Question'} Ask a Question
-        %option{value: 'Smart Dental Appointment Request: Other'} Other
+    %input{type:'text', name:'_gotcha', style:'display:none;'}
 
-  .input
-    %label{for: 'contact-message'}
-      %span.label-text Message
-      %textarea{id:'contact-message', name: 'Message', placeholder:"Comments or Notes about Appointment"}
-  
-  %input{type:'hidden', name:'_next', value:'//localhost:4567/thanks'}
-
-  %input{type:'text', name:'_gotcha', style:'display:none;'}
-
-  .input.submit
-    %input{type:'submit', value: 'Send Email'}
+    .input.submit
+      %input{type:'submit', value: 'Send Email'}

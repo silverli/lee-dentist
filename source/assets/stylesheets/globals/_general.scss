@@ -27,9 +27,12 @@
 }
 
 html {
-  background-color: #3C4765;
-  background: #3C4765 url(../images/main-dark-bg.jpg) top center no-repeat;
+  background-color: darken(#283353, 5%);
   background-size: 120% auto;
+}
+
+body {
+  background: #3C4765 url(../images/main-dark-bg.jpg) top center no-repeat;
 }
 
 .main-content {
@@ -49,21 +52,17 @@ html {
       font-family: serif;
       line-height: 1.4em;
       font-size: 1.2em;
-      padding-left: 16%;
-      padding-right: 16%;
       color: darken($text-color, 15%);
       margin-bottom: 1.5em;
     }
 
     .page-title {
-      padding-left: 16%;
-      padding-right: 16%;
       color: #128080;
     }
   }
 
   .constrained {
-    max-width: 40em;
+    max-width: 45em;
     margin: 0 auto 0 auto;
   }
 }
