@@ -19,6 +19,8 @@
     = javascript_include_tag 'vendor/modernizr.js'
 
     %link{href: 'https://fonts.googleapis.com/css?family=Oswald:400,300,700', rel: "stylesheet"}
+    
+    %link{:rel => "icon", :href => "../assets/images/smart-favicon.png"} <!-- this is 32 x 32px-->
 
     %script
       /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -34,7 +36,6 @@
 
     %main.main-content{role: 'main'}
       .container
-        = partial "partials/_secondary-header"
         = yield
 
     = partial "partials/_site-footer"

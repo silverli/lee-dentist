@@ -4,19 +4,19 @@
     min-height: 8em;
   }
 
-  
   .hidden {
     display: none;
   }
   
-  
   .contact-you-group {
     @include breakpoint($breakpoint-m) {
       @include clearfix;
+
       > .input {
         @include column(6);
         margin-right: 0;
         margin-left: $gutter-width;
+
         &:first-child {
           margin-left: 0;
         }
@@ -26,8 +26,10 @@
 
   .submit {
     text-align: center;
+
     .submit-button {
       width: 100%;
+
       @include breakpoint($breakpoint-m) {
         width: 50%
       }

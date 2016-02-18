@@ -1,30 +1,36 @@
 .feature-grid {
   @include pie-clearfix;
   clear: both;
-  text-align: center;
-  padding: 1em 14% 0 14%;
 
   .feature-divider {
-
-    @include breakpoint($breakpoint-s) {
-      @include column(4);
-    }
-
-    &.last {
-      @include last;
-    }
-
+      
     .feature-item {
-      margin-left: auto;
-      margin-right: auto;
-      background-color: transparent;
-      color: #128080;
-
+      text-align: center;
       .icon {
-        margin: 0.5em;
-        height: 6em;
-        width: 6em;
+        margin-bottom: 1em;
       }
+      .information {
+        p {
+          text-align: left;
+        }
+      }
+
+      @include breakpoint($breakpoint-nav) {
+        .icon {
+          margin-top: 3.5em;
+          @include column(2);
+          @include prepend(2);
+        }
+        .information {
+          @include column(8);
+          @include last;
+        }
+      }
+    }
+
+    .icon {
+      height: 4em;
+      width: 4em;
     }
   }
 }

@@ -1,0 +1,15 @@
+.contact-info {
+  overflow: auto;
+
+  .contact-info-section {
+    width: 100%;
+    margin-bottom: 1em;
+    @include breakpoint ($breakpoint-xs) {
+      @include column(4);
+    }
+  }
+
+  .social {
+    @include last;
+  }
+}

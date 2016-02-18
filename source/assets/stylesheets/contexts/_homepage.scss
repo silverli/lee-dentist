@@ -1,0 +1,12 @@
+.color-block {
+  text-align: center;
+
+  .button {
+    width: 100%;
+    margin: 1em;
+    
+    @include breakpoint($breakpoint-nav) {
+      width: 40%;
+    }
+  }
+}
