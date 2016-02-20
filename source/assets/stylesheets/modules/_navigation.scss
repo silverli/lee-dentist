@@ -13,10 +13,10 @@
 }
 
 .menu-trigger, .utility-trigger {
-  border: 2px #B7BFD4 solid;
+  border: 2px $nav-color solid;
   font-family: 'Oswald', sans-serif;
   background-color: transparent;
-  color: #B7BFD4;
+  color: $nav-color;
   border-radius: 5px;
   font-size: 1.25em;
   padding: 0.25em;;
@@ -69,7 +69,7 @@
     text-align: center;
     padding-top: 1em;
     margin-top: 1em;
-    border-top: 1px solid #2F3C5F;
+    border-top: 1px solid darken($banner-heading-color, 5%);
 
     @include breakpoint($breakpoint-nav) {
       display: inline-block;
@@ -87,7 +87,7 @@
 
 .primary-navigation {
   a {
-    color: #B7BFD4;
+    color: $nav-color;
   }
 
   @include breakpoint($breakpoint-nav) {

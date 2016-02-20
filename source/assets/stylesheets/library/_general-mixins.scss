@@ -49,12 +49,12 @@
   padding: 1.25em;
   text-decoration: none;
   color: $background-color;
-  background-color: #2F3956;
+  background-color: $button-regular;
   vertical-align: text-bottom;
   &:hover,
   &:focus {
     text-decoration: none;
-    background-color: #1C2234;
+    background-color: darken($button-regular, 12%);
     color: $background-color;
   }
 }

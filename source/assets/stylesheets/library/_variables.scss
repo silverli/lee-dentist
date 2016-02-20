@@ -1,16 +1,22 @@
 $text-color: #888;
-$heading-color: $text-color;
 $text-color-subtle: lighten($text-color, 30%);
+$heading-color: #128080;
+$banner-heading-color: #303F67;
+$nav-color: #B7BFD4;
 
 $link-color: #555;
 $link-color-hover: darken($link-color, 15%);
 
-$highlight-color: #333;
+$highlight-color: #87C2C3;
+$highlight-color-light: lighten($nav-color, 10%);
 $highlight-color-hover: darken($highlight-color, 15%);
+
+$button-regular: #2F3956;
 
 $border-color: #ccc;
 
 $background-color: #fff;
 $background-color-subtle: #eee;
+$background-color-alt: #3C4765;
 
-$footer-color: $link-color;
+$footer-color: darken(#283353, 5%);

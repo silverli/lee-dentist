@@ -1,11 +1,11 @@
 .secondary-header {
-  background-color: #87C2C3;
+  background-color: $highlight-color;
   padding: 4em;
   margin-bottom: 1.5em;
   text-align: center;
 
   .secondary-title-large {
-    color: #303F67;
+    color: $banner-heading-color;
     font-family: 'Lato';
     font-weight: 900;
   }

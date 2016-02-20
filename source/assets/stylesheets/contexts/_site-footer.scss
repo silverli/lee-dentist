@@ -1,6 +1,6 @@
 .site-footer {
   @include pie-clearfix;
-  background-color: darken(#283353, 5%);
+  background-color: $footer-color;
   padding-top: 2em;
   margin: 0;
   font-family: 'Oswald', sans-serif;

@@ -4,14 +4,13 @@
 
   .site-name {
     @include heading-4;
-    color: #B7BFD4;
+    color: $nav-color;
     padding-top: 1em;
     display: inline-block;
     float: left;
 
     @include breakpoint($breakpoint-xxl) {
       @include heading-2;
-      color: #B7BFD4;
       padding-top: 0.5em;
     }
   }
