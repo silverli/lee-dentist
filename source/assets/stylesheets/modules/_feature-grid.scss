@@ -1,6 +1,7 @@
 .feature-grid {
   @include pie-clearfix;
   clear: both;
+  padding-top: 1.5em;
 
   .feature-divider {
       
@@ -29,8 +30,8 @@
     }
 
     .icon {
-      height: 4em;
-      width: 4em;
+      height: 6em;
+      width: 6em;
     }
   }
 }
