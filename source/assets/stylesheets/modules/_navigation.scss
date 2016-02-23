@@ -2,7 +2,7 @@
   @include pie-clearfix;
   clear: both;
 
-  @include breakpoint($breakpoint-xxs) {
+  @include breakpoint(289px) {
     clear: none;
     float: right;
   }
@@ -13,17 +13,31 @@
 }
 
 .menu-trigger, .utility-trigger {
-  border: 2px $nav-color solid;
   font-family: 'Oswald', sans-serif;
   background-color: transparent;
   color: $nav-color;
-  border-radius: 5px;
+  display: block;
+  border: none;
   font-size: 1.25em;
-  padding: 0.25em;;
+  padding: 0.25em;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1em;
 
   &:hover, &:focus {
     cursor: pointer;
+  }
+
+  .iconmenu-button {
+    height: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .trigger-text {
+    vertical-align: middle;
+    display:inline-block;
   }
 }
 
@@ -33,6 +47,77 @@
 
 .menu-trigger {
 
+}
+
+$iconDuration: 0.9s;
+$iconEasing: cubic-bezier(.25,1.7,.35,.8);
+
+.iconmenu-button {
+  display:inline-block;
+  position:relative;
+  padding: 0px 5px 10px 10px;
+  transition: $iconDuration/2;
+  cursor:pointer;
+  opacity: 1;
+
+  .iconmenu:before, .iconmenu:after {
+    transition: $iconDuration/2;
+  }
+
+
+  .iconmenu {
+    position: relative;
+    display:inline-block;
+    float: left;
+    margin-top: 0.5em;
+    width: 20px;
+    height: 3px;
+    background: $nav-color;
+    transition: all $iconDuration $iconEasing;
+    border-radius: 10px;
+    z-index:1;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      height: 3px;
+      width: 20px;
+      background: $nav-color;
+      position: absolute;
+      z-index: -1;
+      transition: all $iconDuration $iconEasing;
+      border-radius: 16px;
+    }
+
+    &:before {
+      top: 5px;
+    }
+    &:after {
+      top: -5px;
+    }
+  }
+}
+
+.open:not(.steps) .iconmenu:before,
+.open:not(.steps) .iconmenu:after {
+  top: 0 !important;
+}
+
+.open .iconmenu:before,
+.open .iconmenu:after {
+  transition: $iconDuration $iconEasing;
+}
+.open {
+  .iconmenu {
+    background: transparent;
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .site-header .container {
@@ -58,10 +143,12 @@
   ul {
     background-color: transparent;
     padding: 1em 0;
+    margin-top: -3em;
 
     @include breakpoint($breakpoint-nav) {
       background-color: inherit;
       padding: 0;
+      margin-top: auto;
     }
   }
 

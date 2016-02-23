@@ -10,4 +10,8 @@ $(document).ready(function() {
         $('.tab-content div').toggleClass('active');
       }
     });
+
+    $('.menu-trigger').on('click', function() {
+      $(this).toggleClass('open');
+    });
 });
