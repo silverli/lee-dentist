@@ -46,6 +46,7 @@ configure :development do
   # set :typekit_id, 'xxxxxxx'
 end
 
+set :relative_links, true
 set :haml, { :ugly => true, :format => :html5 }
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -84,4 +85,18 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'gh-pages'
+  deploy.build_before = true
+  # deploy.deploy_method = :rsync
+  # deploy.host          = 'www.example.com'
+  # deploy.path          = '/srv/www/site'
+  # Optional Settings
+  # deploy.user  = 'tvaughan' # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
 end
