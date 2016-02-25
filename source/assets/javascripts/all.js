@@ -11,6 +11,11 @@ $(document).ready(function() {
       }
     });
 
+    $('.services-accordion .icon').on('click', function() {
+      $(this).toggleClass('icon-plus icon-minus');
+      $(this).parent().next().toggleClass('is-showing');
+    });
+
     $('.menu-trigger').on('click', function() {
       $(this).toggleClass('open');
     });

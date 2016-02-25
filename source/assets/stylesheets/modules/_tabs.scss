@@ -4,7 +4,7 @@
 
 .tabs a {
   text-decoration: none;
-  background-color: lighten($button-regular, 35%);
+  background-color: lighten($button-regular, 39%);
   padding: 0.75em 0.75em 0.75em 0.75em;
   color: $background-color;
   font-size: 1.1em;
@@ -96,6 +96,58 @@
         @include column(8);
         @include last;
       }
+    }
+  }
+
+  .services-list {
+      .services-accordion {
+        position: relative;
+        border: 1px solid $text-color-subtle;
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+        &:first-of-type {
+          margin-top: 2em;
+        }
+
+        p {
+          margin: 0.5em;
+          display:none;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          &.is-showing {
+            display: inline-block;
+          }
+        }
+        
+        .accordion {
+          h4 {
+            margin-left: 0.45em;
+            color: $banner-heading-color;
+            font-size: 1em;
+            display: inline-block;
+
+            @include breakpoint($breakpoint-xs) {
+              font-size: 1.2em;
+            }
+
+            @include breakpoint($breakpoint-nav) {
+              font-size: 1.5em;
+            }
+          }
+
+          .icon {
+            position: absolute;
+            top: 1.5em;
+            right: 1em;
+
+            &:hover, &:focus {
+              cursor: pointer;
+            }
+          }
+        }
     }
   }
 }

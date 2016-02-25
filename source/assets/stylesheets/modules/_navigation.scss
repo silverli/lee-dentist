@@ -175,6 +175,7 @@ $iconEasing: cubic-bezier(.25,1.7,.35,.8);
 .primary-navigation {
   a {
     color: $nav-color;
+    text-decoration: none;
   }
 
   @include breakpoint($breakpoint-nav) {
@@ -186,6 +187,12 @@ $iconEasing: cubic-bezier(.25,1.7,.35,.8);
 
         &.last {
           margin-right: 0;
+        }
+
+        a {
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
         }
       }
     }
