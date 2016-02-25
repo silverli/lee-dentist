@@ -36,13 +36,7 @@
 @for $i from 1 through 2 {
   .tab-content {
     .tab-#{$i} {
-      visibility: hidden;
-      height: 0;
-
-      // &.staff-profile {
-      //   visibility: hidden;
-      //   height: 0;
-      // }
+      display: none;
     }
   }
 }
@@ -50,13 +44,7 @@
 @for $i from 1 through 2 {
   .tab-content {
     .tab-#{$i}.active {
-      visibility: visible;
-      height: auto;
-      
-      // &.staff-profile {
-      //   visibility: visible;
-      //   height: auto;
-      // }
+      display: block;
     }
   }
 }

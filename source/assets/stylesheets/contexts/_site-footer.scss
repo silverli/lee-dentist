@@ -9,14 +9,27 @@
 
   .contact-group {
     @include pie-clearfix;
-
+    
     .contact-item {
-      padding-bottom: 1em;
+      margin-bottom: 1.5em;
+
+    @include breakpoint($breakpoint-xxs) {
+      &.site-map {
+        @include column(6);
+      }
+
+      &.address { 
+        @include column(6);
+        @include last;
+      }
+    }
 
       @include breakpoint($breakpoint-l) {
-        @include column(4);
-        line-height: 2em;
-        padding-bottom: 0;
+        &.site-map, &.address, &.map {
+          @include column(4);
+          line-height: 2em;
+          padding-bottom: 0;
+        }
       }
 
       &:last-of-type {
@@ -28,7 +41,6 @@
   }
 
   .copyright {
-    margin-top: 2em;
     text-align: center;
     display: block;
   }
