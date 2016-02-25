@@ -1,6 +1,14 @@
+.icon-bubble { background-image: url('png/bubble.png'); background-repeat: no-repeat; }
+
 .icon-dentist-reverse { background-image: url('png/dentist-reverse.png'); background-repeat: no-repeat; }
 
 .icon-dentist { background-image: url('png/dentist.png'); background-repeat: no-repeat; }
+
+.icon-linkedin { background-image: url('png/linkedin.png'); background-repeat: no-repeat; }
+
+.icon-mail { background-image: url('png/mail.png'); background-repeat: no-repeat; }
+
+.icon-phone { background-image: url('png/phone.png'); background-repeat: no-repeat; }
 
 .icon-smart-logo { background-image: url('png/smart-logo.png'); background-repeat: no-repeat; }
 

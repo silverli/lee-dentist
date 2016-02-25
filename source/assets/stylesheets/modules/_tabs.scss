@@ -62,11 +62,22 @@
 }
 
 .tab-content {
-  padding-top: 2em;
+  margin-top: 2.75em;
   
   .staff-profile {
+    margin-top: 2em;
     margin-bottom: 1.2em;
     @include pie-clearfix;
+    padding-bottom: 2em;
+    border-bottom: 3px solid $highlight-color;
+    
+    &:first-of-type {
+      margin-top: 2em;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
 
     figure{
       text-align: center;

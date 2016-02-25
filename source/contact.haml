@@ -6,34 +6,38 @@ title: Contact Smart Dental
     Contact Us
 
 .smaller-constrained
-
   .contact-info
-    .contact-info-section.phone
-      %h3.page-title PHONE
-      %ul
-        %li P: 781-322-4914
-        %li If Main Line Busy:
-        %li P: 781-605-3707
-        %li F: 781-605-3797
+    .contact-info-section.social
+      .contact-wrapper
+        %h3.page-title CONTACT
+        %ul
+          %li.social-element 
+            %a{:href => "/appointments"}
+              %span.icon-bubble.icon 
+              %p.text Make an Appointment
+          %li.social-element 
+            %a{:href => "mailto:info@smartdentalma.com"} 
+              %span.icon-mail.icon 
+              %p.text info@smartdentalma.com
+          %li.social-element 
+            %a{:href => "tel:781-322-4914"} 
+              %span.icon-phone.icon 
+              %p.text 781-322-4914
+          %li.social-element 
+            %a{:href => "#"}
+              %span.icon-linkedin.icon 
+              %p.text LinkedIn
 
     .contact-info-section.address
-      %h3.page-title ADDRESS
-      %ul
-        %li Smart Dental
-        %li 452 Pleasant Street
-        %li Malden, MA 02148
-
-    .contact-info-section.social
-      %h3.page-title SOCIAL
-      %ul
-        %li Facebook
-        %li Linked-in
-        %li 
-          %button.button Email Us
-
-  %br/
-  %br/
-
+      .contact-wrapper
+        %h3.page-title ADDRESS
+        %ul
+          %li.address-element Smart Dental MA
+          %li.address-element 452 Pleasant Street
+          %li.address-element Malden, MA 02148
+          %li.address-element USA
+ 
+  %h4.page-title For directions, click on the "Directions" link below:
   :plain
 
     <iframe class = "lee-map" width="100%" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=452%20Pleasant%20street%20Malden%2C%20MA%2002148&key=AIzaSyBxW5kSI3Wgxq8x8O7TeCxERk4OwiO3Y1A" allowfullscreen></iframe>

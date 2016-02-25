@@ -7,6 +7,10 @@
   margin-right: 0.5em;
 }
 
+.icon-mail,
+.icon-phone,
+.icon-linkedin,
+.icon-bubble,
 .icon-tooth, 
 .icon-tooth-reverse, 
 .icon-smart-logo, 
@@ -24,4 +28,13 @@
   margin-top: 0.5em;
   height: 10em;
   width: 10em;
+}
+
+.icon-mail,
+.icon-phone,
+.icon-linkedin,
+.icon-bubble {
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: text-bottom;
 }

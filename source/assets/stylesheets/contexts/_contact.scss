@@ -1,15 +1,61 @@
 .contact-info {
   overflow: auto;
+  margin-bottom: 1.6em;
 
   .contact-info-section {
     width: 100%;
-    margin-bottom: 1em;
-    @include breakpoint ($breakpoint-xs) {
-      @include column(4);
+    margin-bottom: 1.5em;
+    .contact-wrapper {
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
+
   .social {
-    @include last;
+    .page-title {
+      margin-bottom: 0.75em;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      @include column(7);
+      font-size: 1.1em;
+    }
+
+    @include breakpoint ($breakpoint-nav) {
+      font-size: 1.4em;
+      @include column(7.5);
+    }
+  }
+
+  .address {
+    .page-title {
+      margin-bottom: 0.65em;
+    }
+
+    @include breakpoint($breakpoint-xs) {
+      @include column(5);
+      @include last;
+      font-size: 1.1em;
+    }
+
+    @include breakpoint ($breakpoint-nav) {
+      font-size: 1.4em;
+      @include column(4.5);
+      @include last;
+    }
+    
+  }
+
+  .social-element {
+    margin-bottom: 0.25em;
+  }
+  
+  .text {
+    display: inline;
+  }
+
+  .address-element {
+    margin-bottom: 0.35em;
   }
 }
