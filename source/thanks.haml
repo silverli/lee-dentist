@@ -1,9 +1,18 @@
 ---
 title: Thank You!
+layout: small-layout
 ---
-.constrained
-  %p Thanks for your form submission!
-  %p We'll get back to you as soon as possible!
+.secondary-header
+  %h1.secondary-title-large
+    Thank You
 
-  %a{:href => "/"}
-    %button Return to the Home Page
+.constrained
+  .thanks-container
+    .thanks-icon
+      %span.icon-check-green.icon
+
+    .thanks-item
+      %h2.page-title Your form submission was successful!
+      %p We'll get back to you as soon as possible! 
+      %a{:href => "/"}
+        %button Return to the Home Page

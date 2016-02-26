@@ -54,6 +54,7 @@
   vertical-align: text-bottom;
   &:hover,
   &:focus {
+    cursor: pointer;
     text-decoration: none;
     background-color: darken($button-regular, 12%);
     color: $background-color;

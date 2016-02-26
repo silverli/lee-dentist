@@ -25,7 +25,7 @@
 
 .tabs a.active {
   background-color: $background-color;
-  color: $text-color;
+  color: darken($text-color, 5%);
   border-radius: 5px 5px 0 0;
   border-bottom: none;
   border-top: 1px solid $text-color;
@@ -57,7 +57,7 @@
     margin-bottom: 1.2em;
     @include pie-clearfix;
     padding-bottom: 2em;
-    border-bottom: 3px solid $highlight-color;
+    border-bottom: 2px solid lighten($text-color-subtle, 5%);
     
     &:first-of-type {
       margin-top: 2em;
@@ -125,7 +125,7 @@
         .accordion {
           h4 {
             margin-left: 0.45em;
-            color: $banner-heading-color;
+            color: lighten($banner-heading-color, 10%);
             font-size: 1em;
             display: inline-block;
 

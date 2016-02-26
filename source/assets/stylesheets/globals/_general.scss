@@ -18,6 +18,23 @@
   @include container;
 }
 
+.small-container {
+  width: 90%;
+  margin: auto;
+  *zoom: 1;
+  padding-bottom: 2em;
+  background-color: $background-color;
+  margin-bottom: 2.5em;
+
+  @include breakpoint($breakpoint-nav) {
+    width: 70%;
+  }
+
+  @include breakpoint($breakpoint-xl) {
+    width: 50%
+  }
+}
+
 html {
   background-color: $footer-color;
 }
@@ -29,6 +46,10 @@ body {
 
 .main-content {
   @include pie-clearfix;
+
+  .small-container {
+    margin-bottom: 4em;
+  }
 
   .container {
     padding-bottom: 2em;
