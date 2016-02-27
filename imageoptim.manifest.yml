@@ -1,7 +1,18 @@
 ---
+build/assets/grunticon/production/png/bubble.png: 2016-02-26 20:37:10.000000000 -05:00
+build/assets/grunticon/production/png/check-green.png: 2016-02-26 20:37:10.000000000
+  -05:00
+build/assets/grunticon/production/png/check-teal.png: 2016-02-26 20:37:10.000000000
+  -05:00
 build/assets/grunticon/production/png/dentist-reverse.png: 2016-02-26 20:27:24.000000000
   -05:00
 build/assets/grunticon/production/png/dentist.png: 2016-02-26 20:27:28.000000000 -05:00
+build/assets/grunticon/production/png/linkedin.png: 2016-02-26 20:37:10.000000000
+  -05:00
+build/assets/grunticon/production/png/mail.png: 2016-02-26 20:37:11.000000000 -05:00
+build/assets/grunticon/production/png/minus.png: 2016-02-26 20:37:11.000000000 -05:00
+build/assets/grunticon/production/png/phone.png: 2016-02-26 20:37:11.000000000 -05:00
+build/assets/grunticon/production/png/plus.png: 2016-02-26 20:37:11.000000000 -05:00
 build/assets/grunticon/production/png/smart-logo.png: 2016-02-26 20:27:27.000000000
   -05:00
 build/assets/grunticon/production/png/smart-tooth.png: 2016-02-26 20:26:43.000000000
@@ -9,9 +20,13 @@ build/assets/grunticon/production/png/smart-tooth.png: 2016-02-26 20:26:43.00000
 build/assets/grunticon/production/png/tool-reverse.png: 2016-02-26 20:27:26.000000000
   -05:00
 build/assets/grunticon/production/png/tool.png: 2016-02-26 20:27:31.000000000 -05:00
+build/assets/grunticon/production/png/tooth-bullet.png: 2016-02-26 20:37:11.000000000
+  -05:00
 build/assets/grunticon/production/png/tooth-reverse.png: 2016-02-26 20:27:28.000000000
   -05:00
 build/assets/grunticon/production/png/tooth.png: 2016-02-26 20:27:35.000000000 -05:00
+build/assets/grunticon/production/png/toothbrush-bullet.png: 2016-02-26 20:37:11.000000000
+  -05:00
 build/assets/grunticon/production/png/toothbrush-reverse.png: 2016-02-26 20:27:31.000000000
   -05:00
 build/assets/grunticon/production/png/toothbrush.png: 2016-02-26 20:27:35.000000000
@@ -20,5 +35,6 @@ build/assets/images/blank-profile.png: 2016-02-26 20:28:07.000000000 -05:00
 build/assets/images/blue-main.jpg: 2016-02-26 20:26:52.000000000 -05:00
 build/assets/images/jeong-profile.jpg: 2016-02-26 20:26:59.000000000 -05:00
 build/assets/images/main-dark-bg.jpg: 2016-02-26 20:26:54.000000000 -05:00
+build/assets/images/mary-profile.jpg: 2016-02-26 20:37:15.000000000 -05:00
 build/assets/images/smart-favicon.png: 2016-02-26 20:26:54.000000000 -05:00
 build/assets/images/smart-tooth.jpg: 2016-02-26 20:26:54.000000000 -05:00
