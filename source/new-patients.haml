@@ -7,44 +7,78 @@ title: New Patient Page
 
 .constrained
   %h2.page-title Ways to Make an Appointment:
-  %ol
-    %li Use our online appointment form to schedule <a href="/appointments"> here</a>.
-    %li Give us a call at 781-322-4914, or 781-605-3707 if the first line is busy! We'll be happy to answer any questions you have.
-    %li Email us at info@smartdentalma.com and we'll promptly get back to you.
+  %ol.appt-methods
+    %li.appt-item Use our online appointment form to schedule <a class="page-links" href="/appointments"> here</a>.
+    %li.appt-item Give us a call at <a href="tel:7813224914">781-322-4914</a> or <a href="tel:7816053707">781-605-3707</a>
+    %li.appt-item Email us at <a class="page-links" href="mailto:info@smartdentalma.com">info@smartdentalma.com</a>
 
-.color-block
-  .constrained
-    %h2.page-title Patient Forms
-    %ul
-      %li 
-        %a{:href => "#"} Welcome Letter
-      %li
-        %a{:href => "#"} Acknowledgement of HIPPA
-      %li
-        %a{:href => "#"} Infection Control
-      %li
-        %a{:href => "#"} Medical History
-      %li
-        %a{:href => "#"} Notice of Privacy
-      %li
-        %a{:href => "#"} Office Policy
-      %li
-        %a{:href => "#"} Patient Privacy
+  %p.informative Being well-prepared for your appointment will ensure that the doctor has all of the needed information to provide the best possible care for you. Also, please take some time to review our <a class="page-links" href="/about">staff page</a> and familiarize yourself with the doctors. We look forward to your visit and we'll be happy to answer any questions you have before or after the appointment.
+  
+  .hero-wrapper
+    .hero-block.forms
+      .hero-title{:valign => "middle"}
+        %h2 Patient Forms
+      .content
+        %ul.form-list
+          %li 
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Welcome Letter
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Acknowledgement of HIPPA
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Infection Control
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Medical History
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Notice of Privacy
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Office Policy
+          %li
+            %a{:href => "#"}
+              %span.icon.icon-tooth-bullet
+              Patient Privacy
+        %p.form-p Please read the above forms and fill them out as necessary.
     
-    %h2.page-title Insurance Options
-    %p We accept cash, checks or credit cards (Visa, MasterCard, Discover, and American Express).
+    .hero-block.insurance
+      .hero-title{:valign => "middle"}
+        %h2 Insurance Options*
+      .content
+        %ul
+          %li 
+            %span.icon.icon-toothbrush-bullet 
+            Aetna = PPO, Access
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            Blue Cross Blue Shield = PPO, Traditional "PAR Network", Federal Employee
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            Delta Dental = Premier, PPO
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            Humana = PPO, Discount Dental, Medicare
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            Met Life = PPO, Medicare
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            Cigna = PPO
+          %li 
+            %span.icon.icon-toothbrush-bullet
+            MassHealth
+  
+  %p *We accept cash, checks or credit cards (Visa, MasterCard, Discover, and American Express).
 
-    %ul
-      %li Aetna = PPO, Access
-      %li Blue Cross Blue Shield = PPO, Traditional "PAR Network", Federal Employee
-      %li Delta Dental = Premier, PPO
-      %li Humana = PPO, Discount Dental, Medicare
-      %li Met Life = PPO, Medicare
-      %li Cigna = PPO
-      %li MassHealth
+  %p *Plan acceptance is subject to change at any time. Please call your insurance company to verify and follow up with the office prior to your scheduled appointment.
 
-    %p For our patients who do not have dental insurance coverage we offer an in-office dental plan called "Smart Dental Plan 2015-2016". This will allow you to have routine exam, cleaning, individual x-rays "PA's" and bitewing x-rays twice a year free of charge. Please see our Office Manager for more information.
-    %p Plan acceptance is subject to change at any time. Please call your insurance company to verify and follow up with the office prior to your scheduled appointment. 
-
-.constrained
-  %h4.page-title Being well-prepared for your appointment will ensure that the doctor has all of the needed information to provide the best possible care for you. Also, please take some time to review our staff page and familiarize yourself with the doctors. We look forward to your visit.
+  %p *For our patients who do not have dental insurance coverage we offer an in-office dental plan called "Smart Dental Plan 2015-2016". This will allow you to have routine exam, cleaning, individual x-rays "PA's" and bitewing x-rays twice a year free of charge. Please see our Office Manager for more information. 

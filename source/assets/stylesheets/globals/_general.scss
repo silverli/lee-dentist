@@ -33,6 +33,10 @@
   @include breakpoint($breakpoint-xl) {
     width: 50%
   }
+
+  @include breakpoint($breakpoint-xxl) {
+    width: 40%
+  }
 }
 
 html {

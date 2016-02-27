@@ -10,10 +10,6 @@
     margin-bottom: 1.5em;
     width: 100%;
 
-    @include breakpoint(1180px) {
-      @include column(5.25);
-    }
-
     .icon-check-green {
       width: 14em;
       height: 14em;
@@ -38,9 +34,5 @@
       font-size: 1.1em;
     }
 
-    @include breakpoint(1180px) {
-      @include column(6.75);
-      @include last;
-    }
   }
 }

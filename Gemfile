@@ -10,6 +10,9 @@ gem "middleman-autoprefixer"
 gem "haml"
 gem "puma"
 gem 'middleman-deploy', '~> 1.0'
+gem 'image_optim'
+gem 'image_optim_pack'
+gem 'middleman-imageoptim'
 
 # For faster file watcher updates on Windows:
 # gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
