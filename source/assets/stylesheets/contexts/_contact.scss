@@ -18,12 +18,11 @@
     }
 
     @include breakpoint($breakpoint-xs) {
-      @include column(7);
-      font-size: 1.1em;
+      font-size: 1.4em;
+      margin-left: 1em; 
     }
 
     @include breakpoint ($breakpoint-nav) {
-      font-size: 1.4em;
       @include column(7.5);
     }
   }
@@ -34,13 +33,11 @@
     }
 
     @include breakpoint($breakpoint-xs) {
-      @include column(5);
-      @include last;
-      font-size: 1.1em;
+      font-size: 1.4em;
+      margin-left: 1em;
     }
 
     @include breakpoint ($breakpoint-nav) {
-      font-size: 1.4em;
       @include column(4.5);
       @include last;
     }
