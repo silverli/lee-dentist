@@ -6,65 +6,67 @@ title: Make an Appointment
     Make an Appointment
 
 .smaller-constrained
-  %h2.page-title Send us a message
   %form.appt-form{action:"//formspree.io/info@smartdentalma.com", method:"POST"}
-    .input
-      %label{for: 'appt-first-name'}
-        %span.label-text First Name
-        %input.appt-first-name{type:'text', name: 'First Name', placeholder:"First Name"}
-
-    .input
-      %label{for: 'appt-last-name'}
-        %span.label-text Last Name
-        %input.appt-last-name{type:'text', name: 'Last Name', placeholder:"Last Name"}
-
-    .contact-you-group
+    .fieldset
+      %legend
+        %h2.page-title Send us a message
       .input
-        %label{for: 'appt-email'}
-          %span.label-text Email
-          %input.appt-email{type:'email', name:"_replyto",placeholder:"yourname@website.com"}
+        %label{for: 'appt-first-name'}
+          %span.label-text First Name
+          %input.appt-first-name{type:'text', id:'appt-first-name', name: 'First Name', placeholder:"First Name"}
 
       .input
-        %label{for: 'appt-phone'}
-          %span.label-text Phone
-          %input.appt-phone{type:'tel', name: 'Phone', placeholder:"XXX-XXX-XXXX"}
+        %label{for: 'appt-last-name'}
+          %span.label-text Last Name
+          %input.appt-last-name{type:'text', id:'appt-last-name', name: 'Last Name', placeholder:"Last Name"}
 
-    .two-up
+      .contact-you-group
+        .input
+          %label{for: 'appt-email'}
+            %span.label-text Email
+            %input.appt-email{type:'email', id:'appt-email', name:"_replyto",placeholder:"yourname@website.com"}
+
+        .input
+          %label{for: 'appt-phone'}
+            %span.label-text Phone
+            %input.appt-phone{type:'tel', id:'appt-phone', name: 'Phone', placeholder:"XXX-XXX-XXXX"}
+
+      .two-up
+        .input
+          %label{for: 'appt-date'}
+            %span.label-text Date Desired
+            %input.appt-date{type:'date', id:'appt-date', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
+
+        .input
+          %label{for: 'appt-time'}
+            %span.label-text Time Desired
+            %input.appt-time{type:'text', id:'appt-time', name: 'Time Desired for Appointment', placeholder:"Time"}
+
       .input
-        %label{for: 'appt-date'}
-          %span.label-text Date Desired
-          %input.appt-date{type:'date', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
+        %label{for: 'appt-reason'}
+          %span.label-text Reason for Appointment
+          %select.appt-reason{id:'appt-reason', name: '_subject'}
+            %option Select Reason
+            %option{value: 'Smart Dental Appointment Request: Check-up/Cleaning'} Check-up/Cleaning
+            %option{value: 'Smart Dental Appointment Request: Whitening'} Whitening
+            %option{value: 'Smart Dental Appointment Request: Crowns & Bridges'} Crowns and Bridges
+            %option{value: 'Smart Dental Appointment Request: Dentures/Specialty Dentures'} Dentures/Specialty Dentures
+            %option{value: 'SmartDental Appointment Request: Cosmetic Fillings'} Cosmetic Fillings
+            %option{value: 'Smart Dental Appointment Request: Implants'} Implants
+            %option{value: 'Smart Dental Appointment Request: Veneers'} Veneers
+            %option{value: 'Smart Dental Appointment Request: Sealants'} Sealants
+            %option{value: 'Smart Dental Appointment Request: Root Canal Therapy'} Root Canal Therapy
+            %option{value: 'Smart Dental Appointment Request: General Question'} Ask a Question
+            %option{value: 'Smart Dental Appointment Request: Other'} Other
 
       .input
-        %label{for: 'appt-time'}
-          %span.label-text Time Desired
-          %input.appt-time{type:'text', name: 'Time Desired for Appointment', placeholder:"Time"}
+        %label{for: 'appt-message'}
+          %span.label-text Anything else we should know? Comments or questions are welcome.
+          %textarea{class:'appt-message', id:'appt-message', name: 'Message', placeholder:"Comments or notes can go here."}
+      
+      %input{type:'hidden', name:'_next', value:'//smartdentalma.com/thanks'}
 
-    .input
-      %label{for: 'appt-reason'}
-        %span.label-text Reason for Appointment
-        %select.appt-reason{name: '_subject'}
-          %option Select Reason
-          %option{value: 'Smart Dental Appointment Request: Check-up/Cleaning'} Check-up/Cleaning
-          %option{value: 'Smart Dental Appointment Request: Whitening'} Whitening
-          %option{value: 'Smart Dental Appointment Request: Crowns & Bridges'} Crowns and Bridges
-          %option{value: 'Smart Dental Appointment Request: Dentures/Specialty Dentures'} Dentures/Specialty Dentures
-          %option{value: 'SmartDental Appointment Request: Cosmetic Fillings'} Cosmetic Fillings
-          %option{value: 'Smart Dental Appointment Request: Implants'} Implants
-          %option{value: 'Smart Dental Appointment Request: Veneers'} Veneers
-          %option{value: 'Smart Dental Appointment Request: Sealants'} Sealants
-          %option{value: 'Smart Dental Appointment Request: Root Canal Therapy'} Root Canal Therapy
-          %option{value: 'Smart Dental Appointment Request: General Question'} Ask a Question
-          %option{value: 'Smart Dental Appointment Request: Other'} Other
+      %input{type:'text', name:'_gotcha', style:'display:none;'}
 
-    .input
-      %label{for: 'appt-message'}
-        %span.label-text Anything else we should know? Comments or questions are welcome.
-        %textarea{class:'appt-message', name: 'Message', placeholder:"Comments or notes can go here."}
-    
-    %input{type:'hidden', name:'_next', value:'//smartdentalma.com/thanks'}
-
-    %input{type:'text', name:'_gotcha', style:'display:none;'}
-
-    .input.submit
-      %input{class:'submit-button', type:'submit', value: 'Send Email'}
+      .input.submit
+        %input{class:'submit-button', type:'submit', value: 'Send Email'}
