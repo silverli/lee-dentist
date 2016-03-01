@@ -35,7 +35,7 @@ title: Make an Appointment
         .input
           %label{for: 'appt-date'}
             %span.label-text Date Desired
-            %input.appt-date{type:'date', id:'appt-date', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
+            %input.appt-date.datepicker{type:'text', id:'appt-date', name: 'Date Desired for Appointment', placeholder:"Date - DDMMYYYY"}
 
         .input
           %label{for: 'appt-time'}
@@ -70,3 +70,6 @@ title: Make an Appointment
 
       .input.submit
         %input{class:'submit-button', type:'submit', value: 'Send Email'}
+
+%script
+  $('.datepicker').pickadate();
