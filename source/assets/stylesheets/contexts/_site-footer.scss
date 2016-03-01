@@ -6,11 +6,16 @@
   font-size: 1.2em;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
+  
+  li, p {
+    color: $text-color;
+  }
 
   a {
-    transition: color 0.7s ease-in-out;
+    color: $text-color;
+    transition: color 0.7s ease;
     &:hover, &:focus {
-      color: lighten($text-color, 15%);
+      color: darken($text-color, 15%);
     }
   }
 

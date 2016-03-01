@@ -8,27 +8,35 @@
 
 .informative {
   font-size: 1.2em;
+  display: block;
+  clear: both;
 }
 
 .appt-methods {
   margin: 2em 0;
+  display: block;
 
+  @include breakpoint($breakpoint-nav) {
+    margin-left: 2.5em;
+  }
 
   .appt-item {
     counter-increment: step-counter;
-    margin-left: 2em;
     font-weight: 400;
+    display: inline-block;
     font-size: 1.4em;
     margin-bottom: 1em;
   }
 
   .appt-item:before {
     content: counter(step-counter);
-    margin: 1em;
+    margin-right: 1em;
     background-color: darken($highlight-color, 10%);
     color: white;
+    display: inline-block;
     padding: 3px 8px;
     border-radius: 3px;
+    float: left;
   }
 }
 
@@ -42,6 +50,7 @@
     margin: 1em 0;
     width: 100%;
     height: 600px;
+    border-radius: 4px;
 
     @include breakpoint(780px) {
       width: 49%;
@@ -66,6 +75,7 @@
         line-height: 5em;
         font-family: 'Lato';
         font-weight: 700;
+        font-size: 2.2em;
       }
     }
 

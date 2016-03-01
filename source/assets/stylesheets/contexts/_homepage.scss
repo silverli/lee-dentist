@@ -1,9 +1,18 @@
+.all-about {
+  font-size: 1.2em;
+}
+
 .color-block {
   text-align: center;
 
   .button {
-    margin: 2.5%;
-    width: 40%;
+    width: 90%;
+    margin-bottom: 0.75em;
     font-size: 1em;
-  }
+
+    @include breakpoint(406px) {
+      margin: 1%;
+      width: 40%;
+    }
+ }
 }

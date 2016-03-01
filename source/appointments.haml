@@ -10,23 +10,23 @@ title: Make an Appointment
   %form.appt-form{action:"//formspree.io/info@smartdentalma.com", method:"POST"}
     .input
       %label{for: 'appt-first-name'}
-        %span.label-text.hidden First Name
+        %span.label-text First Name
         %input.appt-first-name{type:'text', name: 'First Name', placeholder:"First Name"}
 
     .input
       %label{for: 'appt-last-name'}
-        %span.label-text.hidden Last Name
+        %span.label-text Last Name
         %input.appt-last-name{type:'text', name: 'Last Name', placeholder:"Last Name"}
 
     .contact-you-group
       .input
         %label{for: 'appt-email'}
-          %span.label-text.hidden Email
+          %span.label-text Email
           %input.appt-email{type:'email', name:"_replyto",placeholder:"yourname@website.com"}
 
       .input
         %label{for: 'appt-phone'}
-          %span.label-text.hidden Phone
+          %span.label-text Phone
           %input.appt-phone{type:'tel', name: 'Phone', placeholder:"XXX-XXX-XXXX"}
 
     .two-up
@@ -59,8 +59,8 @@ title: Make an Appointment
 
     .input
       %label{for: 'appt-message'}
-        %span.label-text Anything else we should know? Comments, questions are welcome.
-        %textarea{class:'appt-message', name: 'Message', placeholder:"Comments or Notes about Appointment"}
+        %span.label-text Anything else we should know? Comments or questions are welcome.
+        %textarea{class:'appt-message', name: 'Message', placeholder:"Comments or notes can go here."}
     
     %input{type:'hidden', name:'_next', value:'//smartdentalma.com/thanks'}
 

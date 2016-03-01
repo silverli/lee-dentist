@@ -109,16 +109,19 @@
           margin-top: 2em;
         }
 
-        p {
-          margin: 0.5em;
+        .accordion-text {
           display:none;
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
 
           &.is-showing {
             display: inline-block;
+          }
+
+          p {
+            margin: 0.5em;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
           }
         }
         
