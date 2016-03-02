@@ -18,7 +18,7 @@
   .mobile-navigation {
     text-align: center;
     
-    @include breakpoint(289px) {
+    @include breakpoint(302px) {
       margin-top: 3em;
     }
   }
