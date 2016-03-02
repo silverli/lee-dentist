@@ -29,10 +29,11 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </noscript>
 </head>
 <body class='internal'>
-<header class='site-header'>
+<header class='site-header' role='banner'>
 <div class='container'>
 <a href='/'>
 <span class='icon-smart-logo'></span>
+<h4 class='screenreader-text'>Smart Dental MA Logo</h4>
 </a>
 <section class='mobile-navigation'>
 <button class='menu-trigger'>
@@ -42,6 +43,9 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 <span class='trigger-text'>Menu</span>
 </button>
 </section>
+<a class='screenreader-text' href='#content' id='skip-nav'>
+Skip Navigation
+</a>
 <nav class='primary-navigation' role='navigation'>
 <ul class='navigation-item-group'>
 <li class='nav-item'><a href="/about">About</a></li>
@@ -54,7 +58,7 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </div>
 </header>
 
-<main class='main-content' role='main'>
+<main class='main-content' id='content' role='main'>
 <div class='small-container'>
 <div class='secondary-header'>
 <h1 class='secondary-title-large'>
@@ -78,7 +82,7 @@ Thank You
 
 </div>
 </main>
-<footer class='site-footer'>
+<footer class='site-footer' role='contentinfo'>
 <div class='container'>
 <section class='contact-group'>
 <div class='contact-item site-map'>
@@ -112,7 +116,7 @@ Thank You
 </div>
 </section>
 <p class='copyright'>
-Copyright 2016. All rights reserved. &bullet; <a href="#">Citations</a>
+Copyright 2016. All rights reserved. &bullet; <a href="../assets/pdfs/Citations-Credits.pdf" target="_blank">Credits</a>
 </p>
 </div>
 </footer>

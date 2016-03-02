@@ -14,8 +14,15 @@ New Patient Page
 <meta content='' name='description'>
 <meta content='' name='keywords'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
+<script src='//code.jquery.com/jquery-1.12.0.min.js'></script>
+<script src='//code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
 <link href="/assets/stylesheets/main.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.date.css" rel="stylesheet" type="text/css" />
 <script src="/assets/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.date.js" type="text/javascript"></script>
+<script src="/assets/javascripts/legacy.js" type="text/javascript"></script>
 <script src="/assets/javascripts/pdfobject.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Ubuntu:400,300,700,500|Cabin+Condensed:400,700|Abel|Roboto+Slab:300,400,700|Roboto:300,400,700,900|Lato:300,400,700,900' rel='stylesheet'>
 <link href='../assets/images/smart-favicon.png' rel='icon'><!-- this is 32 x 32px--></link>
@@ -29,10 +36,11 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </noscript>
 </head>
 <body class='internal'>
-<header class='site-header'>
+<header class='site-header' role='banner'>
 <div class='container'>
 <a href='/'>
 <span class='icon-smart-logo'></span>
+<h4 class='screenreader-text'>Smart Dental MA Logo</h4>
 </a>
 <section class='mobile-navigation'>
 <button class='menu-trigger'>
@@ -42,6 +50,9 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 <span class='trigger-text'>Menu</span>
 </button>
 </section>
+<a class='screenreader-text' href='#content' id='skip-nav'>
+Skip Navigation
+</a>
 <nav class='primary-navigation' role='navigation'>
 <ul class='navigation-item-group'>
 <li class='nav-item'><a href="/about">About</a></li>
@@ -54,7 +65,7 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </div>
 </header>
 
-<main class='main-content' role='main'>
+<main class='main-content' id='content' role='main'>
 <div class='container'>
 <div class='secondary-header'>
 <h1 class='secondary-title-large'>
@@ -167,7 +178,7 @@ MassHealth
 
 </div>
 </main>
-<footer class='site-footer'>
+<footer class='site-footer' role='contentinfo'>
 <div class='container'>
 <section class='contact-group'>
 <div class='contact-item site-map'>
@@ -201,7 +212,7 @@ MassHealth
 </div>
 </section>
 <p class='copyright'>
-Copyright 2016. All rights reserved. &bullet; <a href="#">Citations</a>
+Copyright 2016. All rights reserved. &bullet; <a href="../assets/pdfs/Citations-Credits.pdf" target="_blank">Credits</a>
 </p>
 </div>
 </footer>

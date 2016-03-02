@@ -14,8 +14,15 @@ About Smart Dental
 <meta content='' name='description'>
 <meta content='' name='keywords'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
+<script src='//code.jquery.com/jquery-1.12.0.min.js'></script>
+<script src='//code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
 <link href="/assets/stylesheets/main.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.date.css" rel="stylesheet" type="text/css" />
 <script src="/assets/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.date.js" type="text/javascript"></script>
+<script src="/assets/javascripts/legacy.js" type="text/javascript"></script>
 <script src="/assets/javascripts/pdfobject.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Ubuntu:400,300,700,500|Cabin+Condensed:400,700|Abel|Roboto+Slab:300,400,700|Roboto:300,400,700,900|Lato:300,400,700,900' rel='stylesheet'>
 <link href='../assets/images/smart-favicon.png' rel='icon'><!-- this is 32 x 32px--></link>
@@ -29,10 +36,11 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </noscript>
 </head>
 <body class='internal'>
-<header class='site-header'>
+<header class='site-header' role='banner'>
 <div class='container'>
 <a href='/'>
 <span class='icon-smart-logo'></span>
+<h4 class='screenreader-text'>Smart Dental MA Logo</h4>
 </a>
 <section class='mobile-navigation'>
 <button class='menu-trigger'>
@@ -42,6 +50,9 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 <span class='trigger-text'>Menu</span>
 </button>
 </section>
+<a class='screenreader-text' href='#content' id='skip-nav'>
+Skip Navigation
+</a>
 <nav class='primary-navigation' role='navigation'>
 <ul class='navigation-item-group'>
 <li class='nav-item'><a href="/about">About</a></li>
@@ -54,7 +65,7 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </div>
 </header>
 
-<main class='main-content' role='main'>
+<main class='main-content' id='content' role='main'>
 <div class='container'>
 <div class='secondary-header'>
 <h1 class='secondary-title-large'>
@@ -71,16 +82,17 @@ Staff & Services
 <h3 class='page-title'>The staff at Smart Dental maintain the highest level of accreditation and pursue ongoing education to stay abreast of the latest trends in dentistry.</h3>
 <div class='staff-profile'>
 <figure>
-<img alt="Jeong's Staff Profile" src='../assets/images/jeong-profile.jpg'>
+<img alt="Jeong's Staff Profile Photo" src='../assets/images/jeong-profile.jpg'>
 <figcaption>
 <h5>Jeong Lee, DMD, MMSc, PhD</h5>
+<h5>Head Dentist and Prosthodontist</h5>
 </figcaption>
 </figure>
 <p>Dr. Lee is an accomplished dentist. Starting her dental education at Seoul National University, Dr. Lee has continued to refine her dental knowledge by obtaining a DMD at Tufts University, and a MMSc at Harvard University. Dr. Lee specializes in dental prosthetics, but will be happy to supervise any dental procedure you may need.  To learn more about Dr. Lee's qualifications, you can find a copy of her CV <a href="../assets/pdfs/jeong-cv.pdf" target="_blank"><u>here</u></a>.</p>
 </div>
 <div class='staff-profile'>
 <figure>
-<img alt='#' src='../assets/images/blank-profile.png'>
+<img alt="Nancy's Staff Profile Photo" src='../assets/images/blank-profile.png'>
 <figcaption>
 <h5>Nancy, Head Dental Assistant &amp; Patient Care Coordinator</h5>
 </figcaption>
@@ -89,7 +101,7 @@ Staff & Services
 </div>
 <div class='staff-profile'>
 <figure>
-<img alt="Mary's Staff Profile" src='../assets/images/mary-profile.jpg'>
+<img alt="Mary's Staff Profile Photo" src='../assets/images/mary-profile.jpg'>
 <figcaption>
 <h5>Mary, Office Manager</h5>
 </figcaption>
@@ -98,7 +110,7 @@ Staff & Services
 </div>
 <div class='staff-profile'>
 <figure>
-<img alt='#' src='../assets/images/blank-profile.png'>
+<img alt="Victoria's Staff Profile Photo" src='../assets/images/blank-profile.png'>
 <figcaption>
 <h5>Victoria, X Position</h5>
 </figcaption>
@@ -111,89 +123,111 @@ Staff & Services
 <ul class='services-list'>
 <li class='services-accordion'>
 <div class='accordion'>
-<h4>Comprehensive Oral Examination</h4>
+<h4>Oral Examination</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Your initial comprehesive oral examination includes a visual examination, charting, periodontal probing, examination of mucogingival defect, diagnosis and treatment recommendations. We will also take x-rays, which includes the panoramic x-ray for proper diagnosis of the anterior (front) and posterior (back) teeth as well as the bite-wing x-ray series for proper diagnosis of proximal decay of posterior teeth. Dental CT can be taken to get 3-D information of bone and deep located  root, vessel and nerve.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Teeth Whitening</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Whitening procedures have effectively restored the smile of people with stained, dull, or discolored teeth.The darker tissue of your teeth, the dentin, can become exposed as the outer layer of enamel is worn away by the effects of aging or things like caffeine and tobacco.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Bonding</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Bonding is a process in which an enamel-like material is applied to a tooth`s surface, sculpted to an ideal shape, hardened, and then polished for an ideal smile. This procedure usually can be accomplished in a single visit.</p>
 <p>Bonding is often performed in order to fill in gaps or change the color of your teeth. It typically only entails one office visit, and the results last for several years.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
-<h4>Crowns and Bridges</h4>
+<h4>Crowns &amp; Bridges</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Crowns are synthetic caps, usually made of a material like porcelain, placed on the top of a tooth. Crowns are typically used to restore a tooth's function and appearance following a restorative procedure such as a root canal. When decay in a tooth has become so advanced that large portions of the tooth must be removed, crowns are often used to restore the tooth.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Dentures</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Complete dentures replace all the teeth, while a partial denture fills in the spaces created by missing teeth and prevents other teeth from changing position.</p>
 <p>Candidates for complete dentures have lost most or all of their teeth. A partial denture is suitable for those who have some natural teeth remaining. A denture improves chewing ability and speech, and provides support for facial muscles. It will greatly enhance the facial appearance and smile.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Implants</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Implants are synthetic structures that are placed in the area of the tooth normally occupied by the root. Implants are anchored to the jawbone or metal framework on the bone and act as a foundation for an artificial tooth or permanent bridge. In some cases, implants can be used to attach dentures.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Extractions</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>When restoration procedures such as root canal therapy, crowns, or fillings are not enough to save a tooth, it may need to be pulled, or extracted.</p>
 <p>Tooth extraction procedures today are far less painful than ever before, thanks to powerful anesthetics and sedatives. In many cases, a patient who has tooth pulled experiences little or no discomfort, and only minor bleeding.</p>
 <p>Wisdom teeth are the third and final set of molars that erupt in the back corners of the upper and lower normal adult mouth. Unfortunately, most people experience problems from wisdom teeth; in most cases, this is because the teeth erupt too close to existing permanent teeth, causing crowding, improper bites, and other problems.  Many people need to have their wisdom teeth extracted to avoid future serious problems.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Sealants</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>The pits and grooves of your teeth are prime areas for opportunistic decay. Even regular brushing sometimes misses some of these intricate structures on the chewing surfaces of your teeth.</p>
 <p>Enter sealants, which are thin coatings applied to the chewing surfaces designed to prevent the intrusion of bacteria and other debris into the deep crevices on the tops of your teeth.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Veneers</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Veneers are thin pieces of porcelain or plastic cemented over the front of your teeth to change their color or shape. Veneers are used on teeth with uneven surfaces or which are chipped, discolored, oddly shaped, unevenly spaced, or crooked.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
-<h4>Scaling and Root Planing</h4>
+<h4>Scaling &amp; Root Planing</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Some cases of acute periodontal (gum) disease that do not respond to more conventional treatment and self-care such as flossing may require a special kind of cleaning called scaling and root planing.</p>
 <p>The procedure begins with administration of a local anesthetic to reduce any discomfort. Then, a small instrument called a "scaler," or an ultrasonic cleaner, is used to clean beneath your gum line to remove plaque and tartar.</p>
 <p>The root surfaces on the tooth are then planed and smoothed. If effective, scaling and root planing helps the gums reattach themselves to the tooth structure.  Additional measures may be needed if the periodontal pockets persist after scaling and root planing.</p>
+</div>
 </li>
 <li class='services-accordion'>
 <div class='accordion'>
 <h4>Root Canal Therapy</h4>
 <span class='icon-plus icon'></span>
 </div>
+<div class='accordion-text'>
 <p>Root canals are tiny passageways that branch off from beneath the top of the tooth, coursing their way vertically downward, until they reach the tip of the root.</p>
 <p>Root canal therapy usually entails one to three visits. During the first visit, a small hole is drilled through the top of the tooth and into the inner chamber. Diseased tissue is removed, the inner chamber cleansed and disinfected, and the tiny canals reshaped. The cleansed chamber and canals are filled with an elastic material and medication designed to prevent infection. If necessary, the drilled hole is temporarily filled until a permanent seal is made with a crown.</p>
 <p>Most patients who have root canal experience little or no discomfort or pain, and enjoy a restored tooth that can last almost as long as its healthy original.</p>
+</div>
 </li>
 </ul>
 </div>
@@ -202,7 +236,7 @@ Staff & Services
 
 </div>
 </main>
-<footer class='site-footer'>
+<footer class='site-footer' role='contentinfo'>
 <div class='container'>
 <section class='contact-group'>
 <div class='contact-item site-map'>
@@ -236,7 +270,7 @@ Staff & Services
 </div>
 </section>
 <p class='copyright'>
-Copyright 2016. All rights reserved. &bullet; <a href="#">Citations</a>
+Copyright 2016. All rights reserved. &bullet; <a href="../assets/pdfs/Citations-Credits.pdf" target="_blank">Credits</a>
 </p>
 </div>
 </footer>

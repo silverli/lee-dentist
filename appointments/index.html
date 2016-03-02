@@ -14,8 +14,15 @@ Make an Appointment
 <meta content='' name='description'>
 <meta content='' name='keywords'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
+<script src='//code.jquery.com/jquery-1.12.0.min.js'></script>
+<script src='//code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
 <link href="/assets/stylesheets/main.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.css" rel="stylesheet" type="text/css" />
+<link href="/assets/stylesheets/classic.date.css" rel="stylesheet" type="text/css" />
 <script src="/assets/javascripts/vendor/modernizr.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.js" type="text/javascript"></script>
+<script src="/assets/javascripts/picker.date.js" type="text/javascript"></script>
+<script src="/assets/javascripts/legacy.js" type="text/javascript"></script>
 <script src="/assets/javascripts/pdfobject.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700|Ubuntu:400,300,700,500|Cabin+Condensed:400,700|Abel|Roboto+Slab:300,400,700|Roboto:300,400,700,900|Lato:300,400,700,900' rel='stylesheet'>
 <link href='../assets/images/smart-favicon.png' rel='icon'><!-- this is 32 x 32px--></link>
@@ -29,10 +36,11 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </noscript>
 </head>
 <body class='internal'>
-<header class='site-header'>
+<header class='site-header' role='banner'>
 <div class='container'>
 <a href='/'>
 <span class='icon-smart-logo'></span>
+<h4 class='screenreader-text'>Smart Dental MA Logo</h4>
 </a>
 <section class='mobile-navigation'>
 <button class='menu-trigger'>
@@ -42,6 +50,9 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 <span class='trigger-text'>Menu</span>
 </button>
 </section>
+<a class='screenreader-text' href='#content' id='skip-nav'>
+Skip Navigation
+</a>
 <nav class='primary-navigation' role='navigation'>
 <ul class='navigation-item-group'>
 <li class='nav-item'><a href="/about">About</a></li>
@@ -54,7 +65,7 @@ grunticon(["/assets/grunticon/production/icons.data.svg.css", "/assets/grunticon
 </div>
 </header>
 
-<main class='main-content' role='main'>
+<main class='main-content' id='content' role='main'>
 <div class='container'>
 <div class='secondary-header'>
 <h1 class='secondary-title-large'>
@@ -62,31 +73,34 @@ Make an Appointment
 </h1>
 </div>
 <div class='smaller-constrained'>
-<h2 class='page-title'>Send us a message</h2>
 <form action='//formspree.io/info@smartdentalma.com' class='appt-form' method='POST'>
+<div class='fieldset'>
+<legend>
+<h2 class='page-title'>Send us a message</h2>
+</legend>
 <div class='input'>
 <label for='appt-first-name'>
-<span class='label-text hidden'>First Name</span>
-<input class='appt-first-name' name='First Name' placeholder='First Name' type='text'>
+<span class='label-text'>First Name</span>
+<input class='appt-first-name' id='appt-first-name' name='First Name' placeholder='First Name' type='text'>
 </label>
 </div>
 <div class='input'>
 <label for='appt-last-name'>
-<span class='label-text hidden'>Last Name</span>
-<input class='appt-last-name' name='Last Name' placeholder='Last Name' type='text'>
+<span class='label-text'>Last Name</span>
+<input class='appt-last-name' id='appt-last-name' name='Last Name' placeholder='Last Name' type='text'>
 </label>
 </div>
 <div class='contact-you-group'>
 <div class='input'>
 <label for='appt-email'>
-<span class='label-text hidden'>Email</span>
-<input class='appt-email' name='_replyto' placeholder='yourname@website.com' type='email'>
+<span class='label-text'>Email</span>
+<input class='appt-email' id='appt-email' name='_replyto' placeholder='yourname@website.com' type='email'>
 </label>
 </div>
 <div class='input'>
 <label for='appt-phone'>
-<span class='label-text hidden'>Phone</span>
-<input class='appt-phone' name='Phone' placeholder='XXX-XXX-XXXX' type='tel'>
+<span class='label-text'>Phone</span>
+<input class='appt-phone' id='appt-phone' name='Phone' placeholder='XXX-XXX-XXXX' type='tel'>
 </label>
 </div>
 </div>
@@ -94,20 +108,20 @@ Make an Appointment
 <div class='input'>
 <label for='appt-date'>
 <span class='label-text'>Date Desired</span>
-<input class='appt-date' name='Date Desired for Appointment' placeholder='Date - DDMMYYYY' type='date'>
+<input class='appt-date datepicker' id='appt-date' name='Date Desired for Appointment' placeholder='Date - DDMMYYYY' type='text'>
 </label>
 </div>
 <div class='input'>
 <label for='appt-time'>
 <span class='label-text'>Time Desired</span>
-<input class='appt-time' name='Time Desired for Appointment' placeholder='Time' type='text'>
+<input class='appt-time' id='appt-time' name='Time Desired for Appointment' placeholder='Time' type='text'>
 </label>
 </div>
 </div>
 <div class='input'>
 <label for='appt-reason'>
 <span class='label-text'>Reason for Appointment</span>
-<select class='appt-reason' name='_subject'>
+<select class='appt-reason' id='appt-reason' name='_subject'>
 <option>Select Reason</option>
 <option value='Smart Dental Appointment Request: Check-up/Cleaning'>Check-up/Cleaning</option>
 <option value='Smart Dental Appointment Request: Whitening'>Whitening</option>
@@ -125,8 +139,8 @@ Make an Appointment
 </div>
 <div class='input'>
 <label for='appt-message'>
-<span class='label-text'>Anything else we should know? Comments, questions are welcome.</span>
-<textarea class='appt-message' name='Message' placeholder='Comments or Notes about Appointment'></textarea>
+<span class='label-text'>Anything else we should know? Comments or questions are welcome.</span>
+<textarea class='appt-message' id='appt-message' name='Message' placeholder='Comments or notes can go here.'></textarea>
 </label>
 </div>
 <input name='_next' type='hidden' value='//smartdentalma.com/thanks'>
@@ -134,12 +148,16 @@ Make an Appointment
 <div class='input submit'>
 <input class='submit-button' type='submit' value='Send Email'>
 </div>
+</div>
 </form>
 </div>
+<script>
+$('.datepicker').pickadate();
+</script>
 
 </div>
 </main>
-<footer class='site-footer'>
+<footer class='site-footer' role='contentinfo'>
 <div class='container'>
 <section class='contact-group'>
 <div class='contact-item site-map'>
@@ -173,7 +191,7 @@ Make an Appointment
 </div>
 </section>
 <p class='copyright'>
-Copyright 2016. All rights reserved. &bullet; <a href="#">Citations</a>
+Copyright 2016. All rights reserved. &bullet; <a href="../assets/pdfs/Citations-Credits.pdf" target="_blank">Credits</a>
 </p>
 </div>
 </footer>
