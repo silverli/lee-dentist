@@ -170,5 +170,8 @@ DEPENDENCIES
   middleman-patterns (~> 0.2)
   puma
 
+RUBY VERSION
+   ruby 2.0.0p648
+
 BUNDLED WITH
-   1.10.6
+   1.14.3
